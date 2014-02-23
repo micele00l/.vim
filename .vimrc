@@ -2,12 +2,15 @@
 set nocompatible
 set nu
 set ruler
+syntax on
+"关闭自动折行
+set nowrap
 filetype off
 
 "for linux
-set rtp+=~/Documents/GitHub/.vim/bundle/vundle/
+"set rtp+=~/Documents/GitHub/.vim/vundle/
 "for windows
-set rtp+=$HOME/Documents/GitHub/.vim/bundle/vundle/
+set rtp+=$HOME/Documents/GitHub/.vim/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 filetype on
@@ -21,9 +24,8 @@ filetype plugin indent on
 
 "设置编码方式
 set fileencoding=utf-8
-set ambiwidth=double
 "自动判断编码时 依次尝试一下编码
-"set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 colorscheme desert
 
@@ -37,7 +39,6 @@ Bundle 'eugeneching/consolas-powerline-vim'
 "字体设置,先到到tool下安装consolas字体
 set guifont=Consolas:h12
 set laststatus=2
-set fileencoding=utf-8
 set t_Co=256
 "let g:Powerline_symbols = 'fancy'
 
@@ -63,3 +64,12 @@ set softtabstop=4
 set smarttab
 "将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]
 set expandtab
+
+"解决菜单乱码
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
+"解决consle输出乱码
+"language messages zh_CN.utf-8
+
+"<F5> 按下F5 运行python
+map <F5> :w<cr>:!python %<cr>
