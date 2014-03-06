@@ -23,10 +23,20 @@ filetype plugin on
 filetype plugin indent on
 
 "设置编码方式
-set fileencoding=utf-8
+"set fileencoding=utf-8
 "自动判断编码时 依次尝试一下编码
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+"set fileencodings=ucs-bom,utf-8,gbk,gb2312,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,latin-1
+if has("win32")
+    set fileencoding=chinese
+else
+    set fileencoding=utf-8
+endif
+"解决console输出乱码
+language messages zh_cn.utf-8
 
+"颜色主题
 colorscheme desert
 
 " My Bundles here:
@@ -68,8 +78,6 @@ set expandtab
 "解决菜单乱码
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
-"解决consle输出乱码
-"language messages zh_CN.utf-8
 
 "<F5> 按下F5 运行python
 map <F5> :w<cr>:!python %<cr>
