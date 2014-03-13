@@ -46,14 +46,17 @@ set t_Co=256
 Bundle 'pydiction'
 
 "目录树
-Bundle 'rooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 
 "语法检查
 Bundle 'scrooloose/syntastic'
 
-"Bundle 'davidhalter/jedi-vim'
+"python 函数补全
+Bundle 'davidhalter/jedi-vim'
+
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+
 "设置Tab宽度
 set tabstop=4
 "设置自动对齐空格数
