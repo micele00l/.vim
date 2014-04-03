@@ -56,12 +56,13 @@ set t_Co=256
 Bundle 'pydiction'
 
 "目录树
-Bundle 'rooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 
 "语法检查
 Bundle 'scrooloose/syntastic'
 
-"Bundle 'davidhalter/jedi-vim'
+"python自动补全
+Bundle 'davidhalter/jedi-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 "设置Tab宽度
@@ -73,11 +74,11 @@ set softtabstop=4
 "设置按退格键时可以一次删除4个空格
 set smarttab
 "将Tab键自动转换成空格 真正需要Tab键时使用[Ctrl + V + Tab]
-set expandtab
+"set expandtab
 
 "解决菜单乱码
-"source $VIMRUNTIME/delmenu.vim
-"source $VIMRUNTIME/menu.vim
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
 
 "<F5> 按下F5 运行python
 map <F5> :w<cr>:!python %<cr>
