@@ -10,7 +10,7 @@ filetype off
 "for linux
 "set rtp+=~/Documents/GitHub/.vim/bundle/vundle/
 "for windows
-set rtp+=$HOME/Documents/GitHub/.vim/bundle/vundle
+set rtp+=$HOME/Documents/GitHub/.vim/bundle/vundle.vim
 call vundle#rc()
 Bundle 'gmarik/vundle'
 filetype on
